@@ -1,0 +1,401 @@
+/* === Base Styles === */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f7fa;
+  color: #333;
+}
+
+header {
+  background-image: url('assets/background.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(44, 62, 80, 0.7); /* dark overlay */
+  z-index: 0;
+}
+
+header h1,
+header p {
+  position: relative;
+  z-index: 1;
+}
+
+nav {
+  background-color: #2c3e50;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #2c3e50;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.skills-grid ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.skills-grid li {
+  margin-bottom: 10px;
+  font-size: 0.95em;
+}
+
+.skills-grid li i {
+  margin-right: 8px;
+  color: #2c3e50;
+}
+
+.certifications h3 {
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.certifications ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+/* === Main Content === */
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  color: #2c3e50;
+  border-bottom: 2px solid #2c3e50;
+  padding-bottom: 5px;
+}
+
+ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+.contact-details {
+  background-color: white;
+  padding: 20px;
+  border-left: 4px solid #2c3e50;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  border-radius: 6px;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.contact-details p {
+  font-size: 1em;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.contact-details i {
+  margin-right: 10px;
+  color: #2c3e50;
+}
+
+/* === Project Cards === */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.project-card h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.project-card p {
+  font-size: 0.95em;
+  margin-bottom: 15px;
+}
+
+.project-card a {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: #0070f3;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.project-card a:hover {
+  background-color: #005bb5;
+}
+
+#certifications {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.cert-list {
+  list-style: none;
+  padding-left: 0;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.cert-list li {
+  margin-bottom: 12px;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+}
+
+.cert-list i {
+  margin-right: 10px;
+  color: #2c3e50;
+}
+
+.cert-list a {
+  color: #2c3e50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.cert-list a:hover {
+  color: #2c3e50;
+  text-decoration: underline;
+}
+
+.cert-category {
+  margin-bottom: 2rem;
+}
+
+.cert-category h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  font-size: 1.1rem;
+}
+
+.cert-button-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.cert-button {
+  background: #0070f3;
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.3s ease;
+  border: 1px solid #0070f3;
+}
+.cert-button {
+  background: #e6f0ff; /* soft blue */
+  color: #2c3e50;
+  border: 1px solid #0070f3;
+}
+.cert-button:hover {
+  background: #0070f3;
+  color: white;
+}
+.cert-button:hover {
+  background: #005bb5;
+}
+
+.cert-note {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.cert-note a {
+  color: #0070f3;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.cert-note a:hover {
+  text-decoration: underline;
+}
+/* === Contact & Social Links === */
+.social-links {
+  margin-top: 15px;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.contact-details,
+.social-links {
+  flex: 1 1 300px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+}
+
+.contact-item .icon {
+  font-size: 1.2rem;
+  color: #2c3e50;
+}
+
+.social-links h3 {
+  margin-bottom: 0.8rem;
+  color: #2c3e50;
+}
+
+.social-links a {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+.cv-link {
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column;
+  }
+}
+
+.social-links h3 {
+  margin-bottom: 10px;
+  color: #0070f3;
+}
+
+.social-links a {
+  display: inline-block;
+  margin-right: 15px;
+  color: #0070f3;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+  color: #2c3e50;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.filter-buttons button {
+  background: #f0f0f0;
+  border: none;
+  padding: 0.7rem 1.4rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.filter-buttons button.active,
+.filter-buttons button:hover {
+  background: #0070f3;
+  color: white;
+}
+
+.social-links a i {
+  margin-right: 8px;
+}
+
+.filter-buttons {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.filter-buttons button {
+  background: #eee;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  margin: 0.3rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.filter-buttons button.active,
+.filter-buttons button:hover {
+  background: #0070f3;
+  color: white;
+}
+
+/* === Footer === */
+footer {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
