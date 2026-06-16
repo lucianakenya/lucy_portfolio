@@ -331,7 +331,10 @@ h3 {
   background: linear-gradient(135deg, #ff7a00, #e66f00); 
   color: white !important; 
 }
-
+.cert-btn.security {
+  background: linear-gradient(135deg, #141e30, #243b55); 
+  color: white !important; 
+}
 .cert-btn:hover {
   transform: translateY(-3px) scale(1.03) !important;
   box-shadow: 0 10px 30px rgba(0,0,0,0.25) !important;
